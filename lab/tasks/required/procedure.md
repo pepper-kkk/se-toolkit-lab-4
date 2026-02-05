@@ -29,10 +29,22 @@
 
    **Using `VS Code`:**
 
-   1. Open `Source Control`.
+   1. Open [`Source Control`](../../appendix/vs-code.md#source-control).
    2. Click `+` next to changed files to stage them.
    3. Type commit message, e.g., `docs: add architecture diagram`.
    4. Click `Commit`.
+
+   **Using `VS Code` (commit specific parts of a file):**
+
+   1. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+   2. Go to `Changes`.
+   3. Click a file.
+   4. Select changed lines in the editor (red-green).
+   5. Right mouse click the selected lines.
+   6. Click `Stage Selected Ranges`.
+   7. Go to `Changes`.
+   8. Write a commit message.
+   9. Click `Commit`.
 
 4. Push the branch to your forked repo:
 
