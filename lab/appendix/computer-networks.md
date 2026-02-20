@@ -9,8 +9,8 @@
   - [IPv6](#ipv6)
 - [Host](#host)
   - [Hostname](#hostname)
-  - [Remote host](#remote-host)
   - [`localhost`](#localhost)
+  - [Remote host](#remote-host)
 
 ## What is a network
 
@@ -62,12 +62,6 @@ It is used to identify the host instead of its [IP address](#ip-address).
 
 Examples: `localhost`, `my-server`, `vm.innopolis.university`.
 
-### Remote host
-
-A remote [host](#host) is a host that is not the [local host](#localhost) — it is accessed over a [network](#what-is-a-network).
-
-Example: the [VM](./vm.md) you connect to via [`SSH`](./ssh.md) is a remote host.
-
 ### `localhost`
 
 `localhost` is a [hostname](#hostname) that refers to the current [host](#host).
@@ -75,3 +69,9 @@ Example: the [VM](./vm.md) you connect to via [`SSH`](./ssh.md) is a remote host
 It resolves to the loopback [IP address](#ip-address) `127.0.0.1`.
 
 Connections to `localhost` never leave the [host](#host) — they are handled entirely within the [operating system](./operating-system.md).
+
+### Remote host
+
+A remote [host](#host) is a host that is not the [local host](#localhost) — it is accessed over a [network](#what-is-a-network).
+
+Example: [your VM](./vm.md#your-vm) you connect to via [`SSH`](./ssh.md) is a remote host.
