@@ -1,20 +1,14 @@
-import os
+"""End-to-end tests for the GET /interactions endpoint."""
+
 import httpx
 
 
-def test_get_interactions_returns_200() -> None:
-    base_url = os.environ["API_BASE_URL"]
-    token = os.environ["API_TOKEN"]
-
-    r = httpx.get(f"{base_url}/interactions/", headers={"X-API-Key": token})
-    assert r.status_code == 200
-    base_url = os.environ["API_BASE_URL"].rstrip("/")
+def test_get_interactions_returns_200(client: httpx.Client) -> None:
+    response = client.get("/interactions/")
+    assert response.status_code == 200
 
 
-def test_get_interactions_response_is_a_list() -> None:
-    base_url = os.environ["API_BASE_URL"].rstrip("/")
-    token = os.environ["API_TOKEN"]
-
-    r = httpx.get(f"{base_url}/interactions/", headers={"X-API-Key": token})
-    assert r.status_code == 200
-    assert isinstance(r.json(), list)
+def test_get_interactions_response_is_a_list(client: httpx.Client) -> None:
+    response = client.get("/interactions/")
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
